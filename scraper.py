@@ -26,7 +26,7 @@
 import scraperwiki
 import lxml.html
 import requests
-iamport BeautifulSoup
+import BeautifulSoup
 import csv
 
 
