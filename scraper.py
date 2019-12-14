@@ -6,8 +6,12 @@ import lxml.html
 #
 # # Read in a page
 page = scraperwiki.scrape("https://advocates.sindhbarcouncil.org/enrollments_list.php")
-table = page.find_all('table')
-print(table)
+
+
+element_tree = lxml.html.fromstring(page.text) 
+  
+tree_title_element = element_tree.xpath('//title')[0]
+print(tree_title_element)
 #
 # # Find something on the page using css selectors
 #print (lxml.html.tostring(html))
