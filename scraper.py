@@ -5,9 +5,9 @@ import scraperwiki
 import lxml.html
 #
 # # Read in a page
-html = scraperwiki.scrape("https://advocates.sindhbarcouncil.org/enrollments_list.php")
-id = html.attrib["data-field":"pre_reg_no"]
-print(id)
+page = scraperwiki.scrape("https://advocates.sindhbarcouncil.org/enrollments_list.php")
+html = lxml.html.fromstring(page)
+print(html)
 
 #
 # # Find something on the page using css selectors
