@@ -26,8 +26,8 @@
 import scraperwiki
 import lxml.html
 import requests
-import BeautifulSoup
-import csv
+from bs4 import BeautifulSoup
+
 
 
 url = requests.get('https://advocates.sindhbarcouncil.org/enrollments_list.php')
