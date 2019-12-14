@@ -8,9 +8,7 @@ import lxml.html
 html = scraperwiki.scrape("https://advocates.sindhbarcouncil.org/enrollments_list.php")
 #
 # # Find something on the page using css selectors
-root = lxml.html.fromstring(html)
-
-print(root)
+print (lxml.html.tostring(html))
 #root.cssselect("div[align='left']")
 #
 # # Write out to the sqlite database using scraperwiki library
