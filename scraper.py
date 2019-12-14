@@ -6,7 +6,7 @@ import lxml.html
 #
 # # Read in a page
 html = scraperwiki.scrape("https://advocates.sindhbarcouncil.org/enrollments_list.php")
-id = html.attrib[data-field="pre_reg_no"]
+id = html.attrib["data-field":"pre_reg_no"]
 print(id)
 
 #
