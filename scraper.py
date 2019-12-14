@@ -10,7 +10,7 @@ page = scraperwiki.scrape("https://advocates.sindhbarcouncil.org/enrollments_lis
 
 element_tree = lxml.html.fromstring(page) 
   
-tree_title_element = element_tree.xpath('//title')[0]
+tree_title_element = element_tree.xpath('//table')
 print(tree_title_element)
 #
 # # Find something on the page using css selectors
