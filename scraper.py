@@ -8,7 +8,7 @@ import lxml.html
 page = scraperwiki.scrape("https://advocates.sindhbarcouncil.org/enrollments_list.php")
 
 
-element_tree = lxml.html.fromstring(page.text) 
+element_tree = lxml.html.fromstring(page) 
   
 tree_title_element = element_tree.xpath('//title')[0]
 print(tree_title_element)
