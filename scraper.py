@@ -6,9 +6,10 @@ import lxml.html
 #
 # # Read in a page
 html = scraperwiki.scrape("https://advocates.sindhbarcouncil.org/enrollments_list.php")
+print(html)
 #
 # # Find something on the page using css selectors
-print (lxml.html.tostring(html))
+#print (lxml.html.tostring(html))
 #root.cssselect("div[align='left']")
 #
 # # Write out to the sqlite database using scraperwiki library
@@ -17,15 +18,4 @@ print (lxml.html.tostring(html))
 # # An arbitrary query against the database
 #scraperwiki.sql.select("* from data where 'name'='peter'")
 
-
-
-"""
-url = requests.get('https://advocates.sindhbarcouncil.org/enrollments_list.php')
-soup =BeautifulSoup(url.text,'lxml')
-result = soup.find_all('td', {'data-field': 'pre_reg_no'})
-if (len(result) > 0):
-    print(result)
-        
-        
-        
-   """     
+   
